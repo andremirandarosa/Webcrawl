@@ -47,12 +47,13 @@ MAX_RESULTS=-1
 
 mvn clean verify exec:java
 
-** Docker em Dev (Utiliza respositório local):** 
-
-docker run -v "$HOME/.m2":/root/.m2  -e BASE_URL=https://targetsite.com -p 4567:4567 --rm webcrawl
-
 ** Docker:**
 
 docker build . -t webcrawl
 
 docker run -e BASE_URL=https://targetsite.com -p 4567:4567 --rm webcrawl
+
+** Docker em Dev (Utiliza respositório local):** 
+
+docker run -v "$HOME/.m2":/root/.m2  -e BASE_URL=https://targetsite.com -p 4567:4567 --rm webcrawl
+
